@@ -116,3 +116,39 @@ curl --location --request POST 'http://localhost:9000/oauth2/token' \
         "productId": 1,
         "quantity": 10
     }'
+
+# ========== USE DOCKER ==================
+ # Proyek E-Commerce dengan Docker
+
+### Langkah-langkah Penggunaan Docker
+
+Untuk memulai menggunakan proyek ini dengan Docker, ikuti langkah-langkah berikut:
+
+1. **Memasang Docker**: Pastikan Docker sudah terpasang di sistem Anda. Jika belum, instal Docker dari [situs resmi Docker](https://www.docker.com/get-started).
+
+2. **Membangun Gambar Docker**
+
+   Setiap layanan memiliki Dockerfile tersendiri di direktori masing-masing. Untuk membangun gambar Docker untuk setiap layanan, gunakan perintah berikut:
+
+   ```sh
+   # Service Authorization
+   cd {direktori}/AuthServer
+   docker build -t service-authorization .
+
+   # Service Inventory
+   cd {direktori}/Inventory-e-commerce
+   docker build -t service-Inventory .
+
+   # Service Order
+   cd ../Order-e-commerce
+   docker build -t service-Order .
+
+# Service Authorization
+docker run -p 9000:9000 -d service-authorization
+
+# Service Inventory
+docker run -p 9003:9003 -d service-Inventory
+
+# Service Order
+docker run -p 9002:9002 -d service-Order 
+
