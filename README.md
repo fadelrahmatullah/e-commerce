@@ -126,7 +126,7 @@ Untuk memulai menggunakan proyek ini dengan Docker, ikuti langkah-langkah beriku
 
 1. **Memasang Docker**: Pastikan Docker sudah terpasang di sistem Anda. Jika belum, instal Docker dari [situs resmi Docker](https://www.docker.com/get-started).
 
-2. **Membangun Gambar Docker**
+2. **Membangun Image Docker**
 
    Setiap layanan memiliki Dockerfile tersendiri di direktori masing-masing. Untuk membangun gambar Docker untuk setiap layanan, gunakan perintah berikut:
 
